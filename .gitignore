@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Backup (نه config اصلی)
+config/config.conf.bak*
+config/test.conf
+config/test.conf.bak
+*.bak
+*.bak2
+*.bak.*
+*.backup
+
+# Runtime
+sessions.json
+*.log
+*.pcap
+
+# IDE/OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

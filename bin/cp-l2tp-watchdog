@@ -1,0 +1,2 @@
+#!/bin/bash
+exec python3 /opt/captive-portal/scripts/l2tp_watchdog.py "$@"

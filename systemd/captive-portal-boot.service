@@ -1,0 +1,18 @@
+[Unit]
+Description=Captive Portal Boot Setup
+After=network-online.target xl2tpd.service strongswan-starter.service dnsmasq.service
+Wants=network-online.target strongswan-starter.service
+Requires=xl2tpd.service
+Before=captive-portal.service session-monitor.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/sbin/cp-reload
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target
